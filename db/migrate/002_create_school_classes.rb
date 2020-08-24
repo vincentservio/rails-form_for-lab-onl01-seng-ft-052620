@@ -1,6 +1,9 @@
-ActiveRecord::Schema.define(version: 2) do
+class CreateSchoolClasses < ActiveRecord::Migration
+    def change
+        create_table :school_classes do |t|
+            t.string :title
+            t.integer :room_number
+        end
+    end
 
-  create_table "school_classes", force: :cascade do |t|
-    t.string  "title"
-    t.integer "room_number"
-  end
+end 
